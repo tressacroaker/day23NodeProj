@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="hikeApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body ng-controller="mainCtrl">
+    <header>
+      <h1>Hiking in Montana </h1>
+    </header>
+    <hr>
+    <button type="button" ng-click="Find Hikes">Find Hikes</button>
+    <form ng-submit="postNewHike(newHike)">
+      <input type="text" ng-model="newhike.name" placeholder="Add A New Hike Here">
+    </form>
+    <div ng-repeat="oneHike in allTheHikes">
+      <h2>
+        <span ng-dblclick="readyToUpdate = true" ng-hide="readyToUpdate">{{oneHike.name}}</span>
+
+
+    <script src="app.js"></script>
+    <script src="mainCtrl.js"></script>
+    <script src="mainServ.js"></script>
+  </body>
+</html>
